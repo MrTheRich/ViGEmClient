@@ -230,7 +230,7 @@ extern "C" {
 	 *
 	 * @returns	A PVIGEM_TARGET representing an Xbox 360 Controller device.
 	 */
-	VIGEM_API PVIGEM_TARGET vigem_target_x360_alloc(void);
+	VIGEM_API PVIGEM_TARGET vigem_target_x360_alloc(USHORT VID = 0x045E, USHORT PID = 0x028E);
 
 	/**
 	 * Allocates an object representing a DualShock 4 Controller device.

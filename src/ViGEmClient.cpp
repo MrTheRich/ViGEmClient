@@ -396,15 +396,15 @@ BOOLEAN vigem_target_is_waitable_add_supported(PVIGEM_TARGET target)
 	return !target->IsWaitReadyUnsupported;
 }
 
-PVIGEM_TARGET vigem_target_x360_alloc(void)
+PVIGEM_TARGET vigem_target_x360_alloc(USHORT VID, USHORT PID)
 {
 	const auto target = VIGEM_TARGET_ALLOC_INIT(Xbox360Wired);
 
 	if (!target)
 		return nullptr;
 
-	target->VendorId = 0x045E;
-	target->ProductId = 0x028E;
+	target->VendorId = VID;
+	target->ProductId = PID;
 
 	return target;
 }
